@@ -43,13 +43,24 @@ When replacing an image, update its catalogue entry including title, category, s
 
 No Gmail password or SMTP credentials are needed. Without the key, the form accurately reports that setup is required and keeps phone, WhatsApp, and email alternatives available.
 
-## Deploy the static build
+## Deploy with GitHub Pages
+
+The repository includes `.github/workflows/deploy-pages.yml`.
+
+1. On GitHub, open **Settings → Pages** and set the deployment source to **GitHub Actions**.
+2. Open **Settings → Secrets and variables → Actions** and create the repository secret `PUBLIC_WEB3FORMS_ACCESS_KEY` with the Web3Forms access key.
+3. Open a pull request into `main`. Pull requests run checks and a production build without deploying.
+4. Merge the pull request. A push to `main` builds and deploys the site automatically.
+
+The workflow configures the default project URL as `https://OWNER.github.io/REPOSITORY/`. For a custom domain, set `SITE_URL` to the full domain and `BASE_PATH` to `/` in the workflow, then configure the custom domain in GitHub Pages settings.
+
+## Other static hosting
 
 Run `npm run build`, then deploy the generated `dist/` directory to any static host (Netlify, Cloudflare Pages, Vercel, GitHub Pages, or conventional hosting). The build does not require a server.
 
 For subdirectory hosting, set Astro's `base` in `astro.config.mjs`, for example `base: '/bgmg/'`, rebuild, and deploy the contents as required by the host. Asset URLs use Astro's base path.
 
-Before going live, replace the placeholder `site` URL in `astro.config.mjs` with the final canonical domain and configure `PUBLIC_WEB3FORMS_ACCESS_KEY` in the host's environment settings.
+Before going live on another provider, set `SITE_URL`, `BASE_PATH`, and `PUBLIC_WEB3FORMS_ACCESS_KEY` in the host's environment settings.
 
 ## Pre-launch requirements
 
