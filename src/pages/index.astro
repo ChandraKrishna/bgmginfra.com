@@ -8,6 +8,7 @@ const categories = ['All', 'Actual Property Photos', 'Living Room', 'Bedrooms', 
 const schema = {
   '@context': 'https://schema.org', '@type': 'RealEstateAgent', name: business.name,
   telephone: business.phoneDisplay, email: business.email,
+  logo: new URL(`${base}bgmg-logo.optimized.png`, Astro.url).href,
   address: { '@type': 'PostalAddress', streetAddress: 'Sector 12, Saini', addressLocality: 'Greater Noida West', addressRegion: 'Uttar Pradesh', postalCode: '203207', addressCountry: 'IN' },
   url: Astro.url.href
 };
@@ -16,7 +17,7 @@ const schema = {
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="BGMG Infra home"><span class="brand-mark">B</span><span>BGMG <small>INFRA PVT LTD</small></span></a>
+    <a class="brand" href="#top" aria-label="BGMG Infra home"><img src={`${base}bgmg-logo.optimized.png`} alt="BGMG Infra Pvt Ltd" /></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
     <nav id="site-nav" aria-label="Main navigation">
       <a href="#property">Property</a><a href="#catalogue">Catalogue</a><a href="#plans">Floor plans</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -109,7 +110,7 @@ const schema = {
       </div>
     </section>
   </main>
-  <footer><div class="shell footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">B</span><span>BGMG <small>INFRA PVT LTD</small></span></a><p>© {new Date().getFullYear()} BGMG Infra Pvt Ltd.</p><div><a href={`mailto:${business.email}`}>Email</a><a href={business.mapsUrl} target="_blank" rel="noreferrer">Directions</a></div></div></footer>
+  <footer><div class="shell footer-inner"><a class="brand footer-brand" href="#top" aria-label="BGMG Infra home"><img src={`${base}bgmg-logo.optimized.png`} alt="BGMG Infra Pvt Ltd" /></a><p>© {new Date().getFullYear()} BGMG Infra Pvt Ltd.</p><div><a href={`mailto:${business.email}`}>Email</a><a href={business.mapsUrl} target="_blank" rel="noreferrer">Directions</a></div></div></footer>
   <nav class="mobile-actions" aria-label="Quick contact"><a href={`tel:${business.phone}`}>☎<span>Call</span></a><a href={business.whatsappUrl} target="_blank" rel="noreferrer">◉<span>WhatsApp</span></a><a href="#contact">✉<span>Enquire</span></a></nav>
 
   <dialog id="lightbox" aria-label="Image viewer"><button class="close-lightbox" aria-label="Close image viewer">×</button><button class="lightbox-prev" aria-label="Previous image">‹</button><figure><img alt="" /><figcaption><strong></strong><span></span></figcaption></figure><button class="lightbox-next" aria-label="Next image">›</button></dialog>
