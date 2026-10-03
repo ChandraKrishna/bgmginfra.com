@@ -52,7 +52,7 @@ The repository includes `.github/workflows/deploy-pages.yml`.
 3. Open a pull request into `main`. Pull requests run checks and a production build without deploying.
 4. Merge the pull request. A push to `main` builds and deploys the site automatically.
 
-The workflow configures the default project URL as `https://OWNER.github.io/REPOSITORY/`. For a custom domain, set `SITE_URL` to the full domain and `BASE_PATH` to `/` in the workflow, then configure the custom domain in GitHub Pages settings.
+The workflow is configured for the custom domain `https://bgmginfra.com` with root-relative assets. If the custom domain is removed, change `SITE_URL` to `https://OWNER.github.io` and `BASE_PATH` to `/REPOSITORY`.
 
 ## Other static hosting
 

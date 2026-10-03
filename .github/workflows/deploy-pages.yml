@@ -18,8 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SITE_URL: https://${{ github.repository_owner }}.github.io
-      BASE_PATH: /${{ github.event.repository.name }}
+      SITE_URL: https://bgmginfra.com
+      BASE_PATH: /
       PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_ACCESS_KEY }}
     steps:
       - name: Check out repository
