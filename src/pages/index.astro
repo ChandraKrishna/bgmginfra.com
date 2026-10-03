@@ -13,11 +13,11 @@ const schema = {
   url: Astro.url.href
 };
 ---
-<BaseLayout title="BGMG Infra | 2 BHK Builder Floor in Greater Noida West" description="Explore a 2 BHK builder floor flat with 1050 sq ft of space from BGMG Infra Pvt Ltd.">
+<BaseLayout title="BGMG Infra | Homes Designed Around Your Requirements" description="Explore 1 BHK, 2 BHK, 3 BHK, penthouse and customized residential options from BGMG Infra Pvt Ltd in Greater Noida West.">
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="BGMG Infra home"><img src={`${base}bgmg-logo.optimized.png`} alt="BGMG Infra Pvt Ltd" /></a>
+    <a class="brand" href="#top" aria-label="BGMG Infra home" data-scroll-top><img src={`${base}bgmg-logo.optimized.png`} alt="BGMG Infra Pvt Ltd" /></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
     <nav id="site-nav" aria-label="Main navigation">
       <a href="#property">Property</a><a href="#catalogue">Catalogue</a><a href="#plans">Floor plans</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -32,10 +32,10 @@ const schema = {
       <div class="hero-content shell">
         <p class="eyebrow light">BGMG Infra Pvt Ltd <span></span> Greater Noida West</p>
         <h1 id="hero-title">Discover Your Next Home with BGMG Infra</h1>
-        <p class="hero-copy">Explore a 2 BHK builder floor flat with 1050 sq ft of space.</p>
+        <p class="hero-copy">Explore 1 BHK, 2 BHK, 3 BHK, penthouse and customized residential options shaped around your requirements.</p>
         <div class="hero-actions"><a class="button gold" href="#property">Explore Property</a><a class="button ghost" href="#contact" data-enquiry="Site Visit">Schedule a Site Visit</a></div>
         <dl class="hero-facts">
-          <div><dt>Property type</dt><dd>{property.type}</dd></div><div><dt>Configuration</dt><dd>{property.configuration}</dd></div><div><dt>Area</dt><dd>{property.area}</dd></div>
+          <div><dt>Property type</dt><dd>{property.type}</dd></div><div><dt>Configurations</dt><dd>{property.configuration}</dd></div><div><dt>Planning</dt><dd>{property.area}</dd></div>
         </dl>
         <p class="concept-note">Hero image: illustrative architectural concept supplied by BGMG Infra.</p>
       </div>
@@ -43,14 +43,14 @@ const schema = {
 
     <section class="intro shell" id="property">
       <div><p class="eyebrow">A considered place to live</p><h2>Space for the way your family lives</h2></div>
-      <div><p>A 2 BHK builder floor flat offering 1050 sq ft of space, presented with supplied interior photographs and design material. Enquire for verified availability and further property details.</p><a class="text-link" href="#contact" data-enquiry="Property Enquiry">Request property details <span>→</span></a></div>
+      <div><p>Whether you need a compact 1 BHK, a practical 2 BHK, a spacious 3 BHK, a premium penthouse or another residential configuration, BGMG Infra helps you explore options suited to your family, lifestyle and space requirements.</p><a class="text-link" href="#contact" data-enquiry="Property Enquiry">Share your requirements <span>→</span></a></div>
     </section>
 
     <section class="feature-grid shell" aria-label="Property highlights">
-      <article><span>01</span><h3>2 BHK</h3><p>A practical two-bedroom configuration.</p></article>
-      <article><span>02</span><h3>1050 sq ft</h3><p>Area stated without an unverified area classification.</p></article>
-      <article><span>03</span><h3>Builder floor</h3><p>A residential builder floor flat.</p></article>
-      <article><span>04</span><h3>Direct guidance</h3><p>Speak with BGMG Infra to confirm every detail.</p></article>
+      <article><span>01</span><h3>1 BHK</h3><p>Efficient homes planned for compact, comfortable living.</p></article>
+      <article><span>02</span><h3>2 &amp; 3 BHK</h3><p>Flexible family homes with practical room configurations.</p></article>
+      <article><span>03</span><h3>Penthouses</h3><p>Premium, spacious options for elevated living.</p></article>
+      <article><span>04</span><h3>Custom requirements</h3><p>Tell us the home type, area and features you need.</p></article>
     </section>
 
     <section class="gallery-section" id="catalogue">
@@ -71,19 +71,19 @@ const schema = {
         ))}
         <p class="no-results" hidden>No supplied images are currently available in this category. Ask us about your requirements.</p>
       </div>
-      <div class="catalogue-pagination shell" aria-label="Catalogue pages">
-        <button class="catalogue-prev" type="button" aria-label="Previous catalogue page">←</button>
+      <div class="catalogue-pagination shell" aria-label="Catalogue slider controls">
+        <button class="catalogue-prev" type="button" aria-label="Previous catalogue slide">←</button>
         <div class="catalogue-pages" aria-live="polite"></div>
-        <button class="catalogue-next" type="button" aria-label="Next catalogue page">→</button>
+        <button class="catalogue-next" type="button" aria-label="Next catalogue slide">→</button>
       </div>
     </section>
 
     <section class="plans shell" id="plans">
-      <div class="plan-copy"><p class="eyebrow">Floor plans</p><h2>A supplied 2 BHK plan, pending confirmation</h2><p>The drawing shown is labelled “2-BHK” in the supplied material. It has not been confirmed as the approved plan for the advertised 1050 sq ft property.</p><div class="notice"><strong>Verification required</strong><p>Dimensions, room arrangement, area correspondence, approvals and construction feasibility must be confirmed by BGMG Infra and the relevant professionals before reliance.</p></div><a class="button dark" href="#contact" data-enquiry="Property Enquiry" data-item="Supplied 2 BHK typical-floor drawing">Ask about this plan</a></div>
-      <button class="plan-image image-button" data-lightbox="6" aria-label="Open supplied 2 BHK floor plan in image viewer"><img src={`${base}catalog/10.jpeg`} alt="Supplied typical-floor drawing showing four 2 BHK units" loading="lazy" /></button>
+      <div class="plan-copy"><p class="eyebrow">Floor plans</p><h2>Planning options for every kind of home</h2><p>The drawing shown is a sample 2 BHK layout from the supplied material. BGMG Infra also welcomes enquiries for 1 BHK, 3 BHK, penthouses and other configurations based on customer requirements.</p><div class="notice"><strong>Plans tailored to your needs</strong><p>Final dimensions, room arrangement, area, approvals and construction feasibility are confirmed according to the selected property and your requirements.</p></div><a class="button dark" href="#contact" data-enquiry="Property Enquiry" data-item="Custom residential floor plan">Discuss your floor plan</a></div>
+      <button class="plan-image image-button" data-lightbox="6" aria-label="Open sample residential floor plan in image viewer"><img src={`${base}catalog/10.jpeg`} alt="Sample typical floor drawing showing four 2 BHK units" loading="lazy" /></button>
     </section>
 
-    <section class="about" id="about"><div class="shell about-inner"><p class="eyebrow light">About BGMG Infra</p><h2>A straightforward approach to finding your next home.</h2><p>BGMG Infra Pvt Ltd presents residential property and design options with direct support for property enquiries and site-visit requests. Contact the team to verify specifications, availability and location details before making a decision.</p><a class="text-link light-link" href="#contact">Start a conversation <span>→</span></a></div></section>
+    <section class="about" id="about"><div class="shell about-inner"><p class="eyebrow light">About BGMG Infra</p><h2>A straightforward approach to finding the right home for you.</h2><p>BGMG Infra Pvt Ltd presents residential property and design options across different configurations, sizes and lifestyle needs. From 1 BHK homes to family-sized layouts, penthouses and custom requirements, the team provides direct support for property enquiries and site visits.</p><a class="text-link light-link" href="#contact">Start a conversation <span>→</span></a></div></section>
 
     <section class="contact shell" id="contact">
       <div class="contact-copy"><p class="eyebrow">Contact & site visit</p><h2>Let’s talk about what you’re looking for.</h2><p>Reach the BGMG Infra team directly or send an enquiry. The listed address is the office/contact address and is not presented as the property location.</p>
@@ -101,6 +101,7 @@ const schema = {
           <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" />
           <div class="field-row"><label>Full name <input name="name" autocomplete="name" required /></label><label>Email <input type="email" name="email" autocomplete="email" required /></label></div>
           <div class="field-row"><label>Phone number <input type="tel" name="phone" autocomplete="tel" pattern="[0-9+() -]{8,20}" required /></label><label>Enquiry type <select name="enquiry_type" required><option value="Property Enquiry">Property Enquiry</option><option value="Site Visit">Site Visit</option><option value="Other">Other</option></select></label></div>
+          <label>Preferred configuration <select name="preferred_configuration" required><option value="">Select your requirement</option><option value="1 BHK">1 BHK</option><option value="2 BHK">2 BHK</option><option value="3 BHK">3 BHK</option><option value="Penthouse">Penthouse</option><option value="Other / Custom">Other / Custom requirement</option></select></label>
           <label>Message <textarea name="message" rows="5" required placeholder="Tell us how we can help"></textarea></label>
           <label class="consent"><input type="checkbox" name="consent" value="Yes" required /><span>I consent to being contacted about this enquiry.</span></label>
           <p class="privacy">Your enquiry details are processed through Web3Forms solely so BGMG Infra can contact you about your request.</p>
@@ -110,20 +111,26 @@ const schema = {
       </div>
     </section>
   </main>
-  <footer><div class="shell footer-inner"><a class="brand footer-brand" href="#top" aria-label="BGMG Infra home"><img src={`${base}bgmg-logo.optimized.png`} alt="BGMG Infra Pvt Ltd" /></a><p>© {new Date().getFullYear()} BGMG Infra Pvt Ltd.</p><div><a href={`mailto:${business.email}`}>Email</a><a href={business.mapsUrl} target="_blank" rel="noreferrer">Directions</a></div></div></footer>
+  <footer><div class="shell footer-inner"><p>© {new Date().getFullYear()} BGMG Infra Pvt Ltd.</p><p class="powered-by">Powered by <a href="https://krishnachandra.com" target="_blank" rel="noreferrer">krishnachandra.com</a></p><div><a href={`mailto:${business.email}`}>Email</a><a href={business.mapsUrl} target="_blank" rel="noreferrer">Directions</a></div></div></footer>
+  <a class="whatsapp-float" href={business.whatsappUrl} target="_blank" rel="noreferrer" aria-label="Message BGMG Infra on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3A12.8 12.8 0 0 0 5.17 22.57L3.46 28.8l6.38-1.67A12.8 12.8 0 1 0 16.04 3Zm0 23.43c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-3.78.99 1.01-3.69-.25-.38a10.62 10.62 0 1 1 8.84 4.81Zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.72.16-.21.32-.82 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.58a9.6 9.6 0 0 1-1.78-2.21c-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.3 3.3c.16.21 2.25 3.44 5.46 4.82.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.89-.77 2.16-1.52.27-.74.27-1.38.19-1.52-.08-.13-.29-.21-.61-.37Z"/></svg>
+  </a>
   <nav class="mobile-actions" aria-label="Quick contact"><a href={`tel:${business.phone}`}>☎<span>Call</span></a><a href={business.whatsappUrl} target="_blank" rel="noreferrer">◉<span>WhatsApp</span></a><a href="#contact">✉<span>Enquire</span></a></nav>
 
   <dialog id="lightbox" aria-label="Image viewer"><button class="close-lightbox" aria-label="Close image viewer">×</button><button class="lightbox-prev" aria-label="Previous image">‹</button><figure><img alt="" /><figcaption><strong></strong><span></span></figcaption></figure><button class="lightbox-next" aria-label="Next image">›</button></dialog>
 
   <script define:vars={{ catalogue, base }}>
     const navToggle = document.querySelector('.nav-toggle'); const nav = document.querySelector('#site-nav');
+    document.querySelector('[data-scroll-top]')?.addEventListener('click', event => { event.preventDefault(); const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' }); history.replaceState(null, '', `${location.pathname}${location.search}`); });
     navToggle?.addEventListener('click', () => { const open = navToggle.getAttribute('aria-expanded') === 'true'; navToggle.setAttribute('aria-expanded', String(!open)); nav?.classList.toggle('open', !open); });
     nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); navToggle?.setAttribute('aria-expanded', 'false'); }));
-    const cards = [...document.querySelectorAll('.catalogue-card')]; const noResults = document.querySelector('.no-results'); const pagination = document.querySelector('.catalogue-pagination'); const pageDots = document.querySelector('.catalogue-pages'); const previousPage = document.querySelector('.catalogue-prev'); const nextPage = document.querySelector('.catalogue-next'); const pageSize = 9; let currentFilter = 'All'; let currentPage = 0;
+    const cards = [...document.querySelectorAll('.catalogue-card')]; const noResults = document.querySelector('.no-results'); const pagination = document.querySelector('.catalogue-pagination'); const pageDots = document.querySelector('.catalogue-pages'); const previousPage = document.querySelector('.catalogue-prev'); const nextPage = document.querySelector('.catalogue-next'); let currentFilter = 'All'; let currentPage = 0;
+    function getPageSize() { if (window.matchMedia('(max-width: 600px)').matches) return 1; if (window.matchMedia('(max-width: 850px)').matches) return 2; return 3; }
     function matchingCards() { return cards.filter(card => currentFilter === 'All' || card.dataset.category?.split('|').includes(currentFilter)); }
-    function renderCatalogue() { const matches = matchingCards(); const pageCount = Math.ceil(matches.length / pageSize); if (currentPage >= pageCount) currentPage = Math.max(0, pageCount - 1); cards.forEach(card => card.hidden = true); matches.slice(currentPage * pageSize, (currentPage + 1) * pageSize).forEach(card => card.hidden = false); if (noResults) noResults.hidden = matches.length !== 0; if (pagination) pagination.hidden = pageCount <= 1; if (previousPage) previousPage.disabled = currentPage === 0; if (nextPage) nextPage.disabled = currentPage >= pageCount - 1; if (pageDots) { pageDots.innerHTML = ''; for (let i = 0; i < pageCount; i++) { const dot = document.createElement('button'); dot.type = 'button'; dot.className = i === currentPage ? 'active' : ''; dot.setAttribute('aria-label', `Go to catalogue page ${i + 1}`); dot.setAttribute('aria-current', i === currentPage ? 'page' : 'false'); dot.addEventListener('click', () => { currentPage = i; renderCatalogue(); document.querySelector('#catalogue')?.scrollIntoView({ behavior: 'smooth' }); }); pageDots.appendChild(dot); } } }
+    function renderCatalogue() { const matches = matchingCards(); const pageSize = getPageSize(); const pageCount = Math.ceil(matches.length / pageSize); if (currentPage >= pageCount) currentPage = Math.max(0, pageCount - 1); cards.forEach(card => card.hidden = true); matches.slice(currentPage * pageSize, (currentPage + 1) * pageSize).forEach(card => card.hidden = false); if (noResults) noResults.hidden = matches.length !== 0; if (pagination) pagination.hidden = pageCount <= 1; if (previousPage) previousPage.disabled = currentPage === 0; if (nextPage) nextPage.disabled = currentPage >= pageCount - 1; if (pageDots) { pageDots.innerHTML = ''; for (let i = 0; i < pageCount; i++) { const dot = document.createElement('button'); dot.type = 'button'; dot.className = i === currentPage ? 'active' : ''; dot.setAttribute('aria-label', `Go to catalogue slide ${i + 1}`); dot.setAttribute('aria-current', i === currentPage ? 'page' : 'false'); dot.addEventListener('click', () => { currentPage = i; renderCatalogue(); }); pageDots.appendChild(dot); } } }
     document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { currentFilter = button.dataset.filter; currentPage = 0; document.querySelectorAll('[data-filter]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); }); renderCatalogue(); }));
-    previousPage?.addEventListener('click', () => { if (currentPage > 0) { currentPage--; renderCatalogue(); } }); nextPage?.addEventListener('click', () => { if ((currentPage + 1) * pageSize < matchingCards().length) { currentPage++; renderCatalogue(); } }); renderCatalogue();
+    previousPage?.addEventListener('click', () => { if (currentPage > 0) { currentPage--; renderCatalogue(); } }); nextPage?.addEventListener('click', () => { if ((currentPage + 1) * getPageSize() < matchingCards().length) { currentPage++; renderCatalogue(); } });
+    let catalogueWidth = window.innerWidth; window.addEventListener('resize', () => { if (window.innerWidth !== catalogueWidth) { catalogueWidth = window.innerWidth; currentPage = 0; renderCatalogue(); } }); renderCatalogue();
     const dialog = document.querySelector('#lightbox'); const lbImg = dialog?.querySelector('img'); const lbTitle = dialog?.querySelector('strong'); const lbCaption = dialog?.querySelector('figcaption span'); let active = 0;
     function showImage(index) { active = (index + catalogue.length) % catalogue.length; const item = catalogue[active]; if (lbImg) { lbImg.src = `${base}${item.image}`; lbImg.alt = item.alt; } if (lbTitle) lbTitle.textContent = item.title; if (lbCaption) lbCaption.textContent = `${item.actual ? 'Actual Photograph' : item.label} · ${item.description}`; }
     document.querySelectorAll('[data-lightbox]').forEach(button => button.addEventListener('click', () => { showImage(Number(button.dataset.lightbox)); dialog?.showModal(); }));
